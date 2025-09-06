@@ -509,7 +509,7 @@ with st.container():
 if recommend_button:
     if selected_movie:
         with st.spinner(f"Fetching details for {selected_movie}..."):
-            plot, poster, director, actors = get_movie_details(selected_movie, OMDB_API_KEY)
+            plot, poster, director, actors, year = get_movie_details(selected_movie, OMDB_API_KEY)
 
         st.markdown("<br>", unsafe_allow_html=True)
         st.markdown(f"<h3 style='text-align:center; color:#FFD700;'>🎥 Your Selection: {selected_movie}</h3>", unsafe_allow_html=True)
@@ -533,6 +533,7 @@ if recommend_button:
                 <p><strong>📖 Plot:</strong> {plot if plot != 'N/A' else 'No plot information available.'}</p>
                 <p><strong>🎬 Director:</strong> {director if director != 'N/A' else 'Not available'}</p>
                 <p><strong>🎭 Cast:</strong> {actors if actors != 'N/A' else 'Not available'}</p>
+                <p><strong>📅 Year:</strong> {year if year != 'N/A' else 'Not available'}</p>
             </div>
             """, unsafe_allow_html=True)
 
@@ -579,7 +580,7 @@ if recommend_button:
                     st.markdown('<div class="content-container">', unsafe_allow_html=True)
                     
                     # Movie title with gradient effect
-                    st.markdown(f'<div class="movie-title">{movie_title}</div>', unsafe_allow_html=True)
+                    st.markdown(f'<div class="movie-title">{movie_title}<br>Year: {year}</div>', unsafe_allow_html=True)
                     
                     # Enhanced plot section
                     plot_text = plot if plot != 'N/A' else 'Plot information is currently unavailable for this cinematic piece. This could be a rare gem or independent film that our algorithm has identified based on sophisticated pattern matching and thematic analysis.'
