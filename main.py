@@ -580,7 +580,7 @@ if recommend_button:
                     st.markdown('<div class="content-container">', unsafe_allow_html=True)
                     
                     # Movie title with gradient effect
-                    st.markdown(f'<div class="movie-title">{movie_title}<br>Year: {year}</div>', unsafe_allow_html=True)
+                    st.markdown(f'<div class="movie-title">{movie_title}</div>', unsafe_allow_html=True)
                     
                     # Enhanced plot section
                     plot_text = plot if plot != 'N/A' else 'Plot information is currently unavailable for this cinematic piece. This could be a rare gem or independent film that our algorithm has identified based on sophisticated pattern matching and thematic analysis.'
@@ -591,6 +591,7 @@ if recommend_button:
                     <div class="movie-details">
                         <p><strong>🎬 Director:</strong> {director if director != 'N/A' else 'Information currently unavailable'}</p>
                         <p><strong>🎭 Featured Cast:</strong> {actors if actors != 'N/A' else 'Cast information not available'}</p>
+                        <p><strong>📅 Year:</strong> {year if year != 'N/A' else 'Not available'}</p>
                     </div>
                     """, unsafe_allow_html=True)
                     
