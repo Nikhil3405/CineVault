@@ -3,6 +3,9 @@ import json
 import streamlit as st
 from recommend import df, recommend_movies
 from omdb_utils import get_movie_details
+import gdown
+
+gdown.download("https://drive.google.com/uc?id=1tvoEPsG1716et27BlxzHOWOlq4_6iVjX", "config.json", quiet=False)
 
 # Load configuration
 config = json.load(open("config.json"))
