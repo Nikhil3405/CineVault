@@ -551,7 +551,7 @@ if recommend_button:
                 movie_title = row['title']
                 
                 with st.spinner(f"🎬 Loading cinematic details for {movie_title}..."):
-                    plot, poster, director, actors = get_movie_details(movie_title, OMDB_API_KEY)
+                    plot, poster, director, actors, year = get_movie_details(movie_title, OMDB_API_KEY)
                 
                 # Movie recommendation container
                 st.markdown(f"""
