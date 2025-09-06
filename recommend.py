@@ -1,5 +1,6 @@
 import joblib 
 import logging
+import gdown  # for Google Drive
 
 logging.basicConfig(
     level=logging.INFO,  # <-- FIXED HERE
@@ -9,6 +10,10 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
+
+# Google Drive file ID
+gdown.download(f"https://drive.google.com/drive/folders/1bTs1KKyIOXREN3gOo-j265lXlafmxo9m?usp=sharing", "df_cleaned.pkl", quiet=False)
+gdown.download(f"https://drive.google.com/drive/folders/1bTs1KKyIOXREN3gOo-j265lXlafmxo9m?usp=sharing", "cosine_sim", quiet=False)
 
 logging.info("loading data...")
 try:
