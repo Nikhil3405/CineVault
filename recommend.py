@@ -12,8 +12,8 @@ logging.basicConfig(
 )
 
 # Google Drive file ID
-gdown.download(f"https://drive.google.com/drive/folders/1bTs1KKyIOXREN3gOo-j265lXlafmxo9m?usp=sharing", "df_cleaned.pkl", quiet=False)
-gdown.download(f"https://drive.google.com/drive/folders/1bTs1KKyIOXREN3gOo-j265lXlafmxo9m?usp=sharing", "cosine_sim", quiet=False)
+gdown.download("https://drive.google.com/uc?id=1SvBG_yK9IGmQAoRvVLWaMUPJ3kzTE_pW", "df_cleaned.pkl", quiet=False)
+gdown.download("https://drive.google.com/uc?id=1jirb9QYlZUm7qP1GoY9BIvNjdyhEjtE2", "cosine_sim.pkl", quiet=False)
 
 logging.info("loading data...")
 try:
